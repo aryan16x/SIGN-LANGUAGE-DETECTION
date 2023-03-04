@@ -14,7 +14,7 @@ train_data = trainDatagen.flow_from_directory(directory=train_dir,
                                               shuffle=True,
                                               seed=42)
 
-model = tf.keras.models.Sequential([
+modelx = tf.keras.models.Sequential([
     
     tf.keras.layers.Conv2D(filters = 32,
                            kernel_size = (3,3),
@@ -34,10 +34,14 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(26, activation = 'softmax')
 ])
 
-model.compile(loss = "categorical_crossentropy",
-              optimizer = optimizers.RMSprop(lr=1e-4),
+modelx.compile(loss = "categorical_crossentropy",
+              optimizer = tf.keras.optimizers.RMSprop(learning_rate=1e-4),
               metrics = ["accuracy"])
 
-history = model.fit(train_data, epochs=3)
+historyx = modelx.fit(train_datax,
+                   epochs = 25,
+                   steps_per_epoch = len(train_datax),
+                   validation_data = validation_data,
+                   validation_steps = len(validation_data))
 
-model.save("sign_model14d")
+modelx.save("sign_model")
