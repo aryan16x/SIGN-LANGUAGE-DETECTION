@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Project Workflow](#project-workflow)
 - [Proposed Solution](#proposed-solution)
