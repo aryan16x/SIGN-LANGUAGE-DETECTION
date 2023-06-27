@@ -12,6 +12,11 @@
 - [Text to Speech conversion](#text-to-speech-conversion)
 - [Results \& Comparison](#results--comparison)
 
+### Datasets
+
+[Preprocessed Data](https://drive.google.com/drive/folders/1CPb95ll-2v6IYHTGMFAZXaKnJnf5SPSm?usp=sharing)
+[Without Preprocessed Data](https://drive.google.com/drive/folders/1YF9w3k9knvrYDhrbj92RNpXfsvH30LUJ?usp=sharing)
+
 ## Introduction
 
 - Sign language is used as a primary mode of communication by Individuals with auditory impairments. It enables, as well as facilitates effective communication between hearing-impaired individuals and those who are not. It can also be used by individuals who are not hearing impaired but have communication difficulties due to speech impairments or developmental disorders. The Sign languages used around the world are of many regional types, such as American Sign Language, Auslan (Australian Sign Language), and British Sign Language,
