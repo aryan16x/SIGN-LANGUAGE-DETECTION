@@ -2,17 +2,16 @@
 
 ## Table of Contents
 
-- [A Media-pipe integrated deep learning model for ISL (Alphabet) recognition and converting Text to Sound with Video Input](#a-media-pipe-integrated-deep-learning-model-for-isl-alphabet-recognition-and-converting-text-to-sound-with-video-input)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Project Workflow](#project-workflow)
-  - [Proposed Solution](#proposed-solution)
-  - [Data Acquisition](#data-acquisition)
-  - [Data Preprocessing](#data-preprocessing)
-  - [Model Architecture - CNN Model Generation](#model-architecture---cnn-model-generation)
-  - [Training \& Testing of the Model](#training--testing-of-the-model)
-  - [Text to Speech conversion](#text-to-speech-conversion)
-  - [Results \& Comparison](#results--comparison)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Project Workflow](#project-workflow)
+- [Proposed Solution](#proposed-solution)
+- [Data Acquisition](#data-acquisition)
+- [Data Preprocessing](#data-preprocessing)
+- [Model Architecture - CNN Model Generation](#model-architecture---cnn-model-generation)
+- [Training \& Testing of the Model](#training--testing-of-the-model)
+- [Text to Speech conversion](#text-to-speech-conversion)
+- [Results \& Comparison](#results--comparison)
 
 ## Introduction
 
