@@ -51,7 +51,7 @@ mp_model = mp_hands.Hands(
 )
 
 video = cv2.VideoCapture("video.mp4")
-modelx = tf.keras.models.load_model("sign_model8d")
+modelx = tf.keras.models.load_model("sign_model_with_1_optuna")
 k_ellipse = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, [5,5])
 
 success, frame = video.read()

@@ -1,8 +1,6 @@
 import cv2
-import numpy as np
-from scipy import signal
-import os
 import mediapipe as mp
+import os
 
 mp_hands = mp.solutions.hands
 
@@ -15,7 +13,6 @@ mp_model = mp_hands.Hands(
 # Load the video
 video = cv2.VideoCapture("video.mp4")
 currentframe=1000
-k_ellipse = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, [5,5])
 
 # Read the first frame to get the video's width and height
 success, frame = video.read()
@@ -24,8 +21,8 @@ if not success:
     exit()
 
 # Create the output folder
-if not os.path.exists('datax11'):
-    os.makedirs('datax11')
+if not os.path.exists('datax12'):
+    os.makedirs('datax12')
 
 
 # Loop through all the frames in the video
@@ -63,32 +60,17 @@ while True:
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         # Apply a Gaussian blur to the frame
-        blur = cv2.GaussianBlur(gray, (5, 5), 0)
-        
-        xMask = np.array([[-1,0,1], [-1,0,1], [-1,0,1]])
-        yMask = xMask.T.copy()
-        fx = signal.convolve2d(blur, xMask, boundary='symm', mode='same')
-        fy = signal.convolve2d(blur, yMask, boundary='symm', mode='same')
-        Gm = (fx**2 + fy**2)**(1/2)
-        imSharp = blur + 3*Gm
-
-        res = cv2.morphologyEx(imSharp, cv2.MORPH_TOPHAT, k_ellipse)
-        
-        res = cv2.merge([res, res, res])
-        
-        cv2.imshow("res", res)
-        if cv2.waitKey(1) & 0xFF==ord('q'):
-            break
+        res = cv2.GaussianBlur(gray, (5, 5), 0)
         
         fliph = cv2.flip(res, 0)
         flipv = cv2.flip(res, 1)
         flipb = cv2.flip(res, -1)
         
-        cv2.imwrite("datax11/vid5/" + str(currentframe) + '.jpg' , res)
+        cv2.imwrite("datax12/" + str(currentframe) + '.jpg' , res)
         currentframe += 1
-        cv2.imwrite("datax11/vid5/" + str(currentframe) + '.jpg' , fliph)
+        cv2.imwrite("datax12/" + str(currentframe) + '.jpg' , fliph)
         currentframe += 1
-        cv2.imwrite("datax11/vid5/" + str(currentframe) + '.jpg' , flipv)
+        cv2.imwrite("datax12/" + str(currentframe) + '.jpg' , flipv)
         currentframe += 1
-        cv2.imwrite("datax11/vid5/" + str(currentframe) + '.jpg' , flipb)
+        cv2.imwrite("datax12/" + str(currentframe) + '.jpg' , flipb)
         currentframe += 1
