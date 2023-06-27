@@ -28,7 +28,7 @@ among others. In India, ISL or Indian sign language is used throughout the count
 
 The following process is caried out in a step-by-step manner to acquire desired result.
 
-![Project Workflow Diagram](/Images/image-1.png)
+![Project Workflow Diagram](./Images/image-1.png)
 
 1. Data Acquisition
 2. Data Preprocessing
